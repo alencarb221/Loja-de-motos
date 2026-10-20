@@ -146,6 +146,7 @@ function createCard(motorcycle, index) {
   const message = `Olá, Oeste Moto Center! Vi um anúncio demonstrativo de ${motorcycle.name}. Quais motos estão disponíveis?`;
   const article = document.createElement("article");
   article.className = "bike-card";
+  article.dataset.category = motorcycle.categoryKey;
   article.style.setProperty("--card-order", index);
   article.dataset.photos = JSON.stringify(photos);
   article.innerHTML = `
